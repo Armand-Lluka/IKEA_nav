@@ -10,24 +10,22 @@
   <body>
     <nav class="topnav">
       <ul>
-        <li>
-          <img
-            src="./imgs/ikea-logo.44494cf681bac0c153bd8c0a517421de.svg"
-            alt="logo"
-          />
-        </li>
-        <li><a href="">Produkte</a></li>
-        <li><a href="">Raume</a></li>
-        <li><a href="">Aktuelles</a></li>
-        <li><a href="">Inspirataion</a></li>
+        <img
+          src="./imgs/ikea-logo.44494cf681bac0c153bd8c0a517421de.svg"
+          alt="logo"
+        />
+        <div class="navigation">
+          <li><a href="">Produkte</a></li>
+          <li><a href="">Raume</a></li>
+          <li><a href="">Aktuelles</a></li>
+          <li><a href="">Inspirataion</a></li>
+        </div>
+
         <div class="search-input">
           <form action="">
-            <img
-              src="./imgs/nav-search.be9b20e02c34370711bd3b3cc86702f9.svg"
-              alt="search-icon"
-            />
             <label for="input"></label>
             <input
+              autocomplete="off"
               type="text"
               class="search"
               id="search"
@@ -38,8 +36,6 @@
 
           <ul id="list-container"></ul>
         </div>
-
-        <!-- <input type="text" /> -->
       </ul>
     </nav>
     <script src="./script.js"></script>
