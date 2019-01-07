@@ -7,7 +7,7 @@ ul {
 
 .instruct {
   position: relative;
-  margin-top: 300px;
+  margin-top: 100px;
   z-index: -1;
 }
 
@@ -40,7 +40,6 @@ ul img {
 
 li a {
   display: block;
-  /* color: white; */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -52,8 +51,8 @@ li a:hover {
 }
 
 a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .search-input {

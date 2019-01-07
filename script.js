@@ -8,6 +8,7 @@
 let targetInput = document.getElementById('search'),
   results = document.getElementById('list-container'),
   matches = [];
+
 const mockData = {
   chair: [
     { company: 'Renberget', type: 'swivel chair', price: '49.99' },
@@ -23,18 +24,11 @@ const mockData = {
   ]
 };
 
+// Search auto selected
 targetInput.focus();
 
 targetInput.addEventListener('keyup', function(event) {
-  /*
-   * Key Codes
-   * Enter: 13
-   * Arrow up: 38
-   * Arrow down: 40
-   */
-
   results.innerHTML = '';
-  // toggleResults('hide');
 
   if (this.value.length > 0) {
     matches = getMatches(this.value);
@@ -46,6 +40,7 @@ targetInput.addEventListener('keyup', function(event) {
   }
 });
 
+// Get matches of user input
 const getMatches = input => {
   let matchList = [];
 
@@ -54,7 +49,6 @@ const getMatches = input => {
       mockData.chair[i].type.toLowerCase().indexOf(input.toLowerCase()) != -1 ||
       mockData.chair[i].company.toLowerCase().indexOf(input.toLowerCase()) != -1
     ) {
-      // console.log(mockData.chair[i].type);
       matchList.push(
         mockData.chair[i].type +
           ' -' +
@@ -68,12 +62,12 @@ const getMatches = input => {
   return matchList;
 };
 
+// DOM Render of the matches as clickable LIs
 const displayMatches = matchList => {
   let j = 0;
   let url = 'https://www.ikea.com/at/de/search/products/?q=';
 
   while (j < matchList.length) {
-    // console.log(matchList);
     results.innerHTML +=
       `<a href="${url + matchList[j]}"> <li class="result">  ` +
       matchList[j] +
