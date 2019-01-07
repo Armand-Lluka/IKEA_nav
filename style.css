@@ -9,6 +9,10 @@ ul {
   float: left;
 }
 
+nav {
+  padding: 200px;
+}
+
 ul input {
   background-color: #f1f1f1;
   padding: 6px;
@@ -41,7 +45,9 @@ li a:hover {
   background-color: #0051ba;
 }
 
-.search {
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 
 .search-input {
