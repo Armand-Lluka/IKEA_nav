@@ -5,12 +5,18 @@ ul {
   overflow: hidden;
 }
 
+.instruct {
+  position: relative;
+  margin-top: 300px;
+  z-index: -1;
+}
+
 .navigation li {
   float: left;
 }
 
 nav {
-  padding: 200px;
+  padding: 150px 500px;
 }
 
 ul input {
